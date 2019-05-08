@@ -1,0 +1,29 @@
+﻿<Window x:Class="GOTApp.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GOTApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        TextElement.Foreground="#FFE9E9E9"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="#FF323232">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="380*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="685*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="searcher" materialDesign:HintAssist.Hint="Enter character name" CaretBrush="#FF535353" BorderBrush="#FF535353" Margin="0,0,0,5" TextChanged="SearcherTextChanged"/>
+        <ListBox Name="characterListBox" Grid.Row="1" Grid.Column="0" SelectionChanged="CharacterListBoxSelectionChanged"/>
+        <Grid Name="webWindowGrid" Loaded="WindowLoaded" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"/>
+    </Grid>
+</Window>

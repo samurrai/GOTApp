@@ -1,0 +1,28 @@
+﻿<Window x:Class="GOTApp.InfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GOTApp"
+        mc:Ignorable="d"
+        Title="InfoWindow" Height="200" Width="400"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="235*"/>
+        </Grid.ColumnDefinitions>
+        <Image Name="characterImage" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4"/>
+        <Label Name="nameLabel" Content="Имя: " Grid.Column="1" Grid.Row="0"/>
+        <Label Name="genderLabel" Content="Пол: " Grid.Column="1" Grid.Row="1"/>
+        <Label Name="houseLabel" Content="Дом: " Grid.Column="1" Grid.Row="2"/>
+        <Label Name="actorLabel" Content="Актер: " Grid.Column="1" Grid.Row="3"/>
+    </Grid>
+</Window>
